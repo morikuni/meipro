@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html lang="ja-JP">
+<head>
+	<meta charset="UTF-8">
+	<title>MazeGame</title>
+	<script type="text/javascript">
+		window.onload = function(){
+			var stageNum = 8;
+			var stageSelect = document.getElementById('stageSelect');
+			for(var i=1; i<=stageNum; i++){
+				stageSelect.innerHTML += '<li><a href="./game.html?stage='+i+'">ステージ'+i+'</a></li>';
+			}
+		}
+	</script>
+	<style type="text/css">
+		body{
+			background-image: url(./images/mazebackground.png);
+		}
+	</style>
+</head>
+<body>
+	<h1>ようこそ！めいぷろ（仮）へ！</h1>
+
+	<p>ステージを選んでね！
+		<ul id="stageSelect">
+		</ul>
+	</p>
+</body>
+</html>

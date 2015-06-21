@@ -1,0 +1,60 @@
+#wrapper{
+	@height : 500px;
+	width: 100%;
+	height: @height;
+
+	@border-width: 3px;
+	#enchant-stage{
+		background-image: url(../images/mazebackground.png);
+		float : left;
+		.myborder(@border-width, #6cdc5a);
+	}
+
+	#program{
+		background-image: url(../images/programbackground.png);
+		float: right;
+		height: @height;
+		overflow: scroll;
+		.myborder(@border-width, #4c92dc);
+
+		.instruction{
+			background: #698eec;
+			display: inline;
+
+			.codeDefault{
+				border: #ffffff 2px solid;
+				-webkit-border-radius: 10px;
+			}
+
+			.codeRun{
+				border: #ff0000 5px solid;
+				margin-left: 20px;
+				-webkit-border-radius: 10px;
+			}
+
+			table{
+				background: #c9e01d;
+
+				.indent{
+					min-width: 30px;
+					width: 30px;
+				}
+
+				td{
+					white-space: nowrap;
+				}
+			}
+		}
+
+		hr{
+			border: 0;
+			margin: 2px;
+		}
+	}
+}
+
+.myborder(@width, @color){
+	border: @width solid @color;
+	border-top: 25px solid @color;
+	-webkit-border-radius: 5px;
+}
